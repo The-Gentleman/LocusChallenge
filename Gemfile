@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby "3.0.0"
+ruby "3.1.0"
 
 gem "bootsnap", require: false
 gem "importmap-rails"
@@ -15,6 +15,7 @@ gem "stimulus-rails"
 gem "turbo-rails"
 gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
 gem "view_component"
+gem 'pry', '~> 0.14.1'
 
 
 group :development, :test do
