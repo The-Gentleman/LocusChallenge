@@ -21,7 +21,9 @@ class TasksController < ApplicationController
     if @task.save
       redirect_to task_list_tasks_path(@task_list, @task), notice: "Task was successfully created."
       # when trying to create a new task, an error was thrown here
-      #fix the "taskS" type and redirected to task_lists
+      #fix the "taskS" typo and redirected to task_lists
+      #Also, not that it caused anything to break, but should I really be able to list a chore with a due date
+      #set to Feburary of 1902?
     else
       render :new, status: :unprocessable_entity
     end
