@@ -13,13 +13,20 @@
   </head>
 
   <body>
-    <header class="container">
-      <nav class="navbar navbar-default">
-         <ul class="nav navbar-nav navbar-left">    
-              <%= link_to "Home", root_path %> 
-          </ul>
+    
+      <nav aria-label="navbar navbar-default">
+         <ol class="breadcrumbs">    
+              <%= link_to "Home", root_path %>
+              
+             <% if controller_name == "tasks" %>
+              <%= "Tasks" %> > 
+              <%= @task_list.name %>
+             <% end %>
+                
+           
+          </ol>
       </nav>
-    </header>
+   
     <%= yield %>
   </body>
 </html>
