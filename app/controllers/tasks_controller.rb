@@ -6,6 +6,7 @@ class TasksController < ApplicationController
 
   def index
     @tasks = @task_list.tasks
+    #binding.pry
   end
 
   def new
