@@ -27,6 +27,11 @@
            <% end %>
          <% end %>
          
+         <% if controller_name == "task_lists" %> >
+          <% if action_name == "edit"%>
+            <%= "Edit #{@task_list.name} list" %>
+          <% end %>
+         <% end %>
       </ol>
     </nav>
     <%= yield %>
