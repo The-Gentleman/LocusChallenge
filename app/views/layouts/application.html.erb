@@ -22,14 +22,15 @@
            <% #binding.pry %>
            <% if action_name == "new" %> 
             > <%= "Create #{@task_list.name}" %> 
-           <% end %>
-           <% if action_name == "edit" %> 
+           <% elsif action_name == "edit" %> 
             > <%= "Edit #{@task_list.name}" %> 
            <% end %>
          <% end %>
           
          <% if controller_name == "task_lists" %>
-          <% if action_name == "edit"%> 
+          <% if action_name == "new" %>
+            <%= "Create task" %>
+          <% elsif action_name == "edit"%> 
             > <%= "Edit #{@task_list.name} list" %>
           <% end %>
          <% end %>
