@@ -16,20 +16,21 @@
     <nav aria-label="navbar navbar-default">
       <ol class="breadcrumbs">    
          <%= link_to "Home", root_path %>
+         
          <% if controller_name == "tasks" %>
            <%= link_to "Tasks", task_list_tasks_path %> > <%= @task_list.name %>
            <% #binding.pry %>
-           <% if action_name == "new" %> > 
-            <%= "Create #{@task_list.name}" %>
+           <% if action_name == "new" %> 
+            > <%= "Create #{@task_list.name}" %> 
            <% end %>
-           <% if action_name == "edit" %> > 
-            <%= "Edit #{@task_list.name}" %>
+           <% if action_name == "edit" %> 
+            > <%= "Edit #{@task_list.name}" %> 
            <% end %>
          <% end %>
-         
-         <% if controller_name == "task_lists" %> >
-          <% if action_name == "edit"%>
-            <%= "Edit #{@task_list.name} list" %>
+          
+         <% if controller_name == "task_lists" %>
+          <% if action_name == "edit"%> 
+            > <%= "Edit #{@task_list.name} list" %>
           <% end %>
          <% end %>
       </ol>
