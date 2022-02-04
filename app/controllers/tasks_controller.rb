@@ -23,8 +23,7 @@ class TasksController < ApplicationController
       redirect_to task_list_tasks_path(@task_list, @task), notice: "Task was successfully created."
       # when trying to create a new task, an error was thrown here
       #fix the "taskS" typo and redirected to task_lists
-      #Also, not that it caused anything to break, but should I really be able to list a chore with a due date
-      #set to Feburary of 1902?
+
     else
       render :new, status: :unprocessable_entity
     end
@@ -41,7 +40,8 @@ class TasksController < ApplicationController
   def destroy
     @task.destroy
 
-    redirect_to task_lists_url(), notice: "Task was successfully destroyed."
+    redirect_to task_list_tasks_path(@task.task_list), notice: "Task was successfully destroyed."
+    # found another bug here
   end
 
   private
