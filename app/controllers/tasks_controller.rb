@@ -21,8 +21,8 @@ class TasksController < ApplicationController
 
     if @task.save
       redirect_to task_list_tasks_path(@task.task_list), notice: "Task was successfully created."
-      # when trying to create a new task, an error was thrown here
-      #fixed the redirect here 
+      #When trying to create a new task, an error was thrown here
+      #I fixed the redirect here. 
 
     else
       render :new, status: :unprocessable_entity
@@ -41,7 +41,7 @@ class TasksController < ApplicationController
     @task.destroy
 
     redirect_to task_list_tasks_path(@task.task_list), notice: "Task was successfully destroyed."
-    # found another bug here
+    #I found another bug here.
   end
 
   private
